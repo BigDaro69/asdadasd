@@ -1,0 +1,192 @@
+/* styles.css */
+html, body {
+    height: 100%; /* Ustawia wysokość na 100% */
+    margin: 0; /* Usuwa domyślne marginesy */
+    padding: 0; /* Usuwa domyślne wypełnienie */
+    font-family: 'Tahoma'; /* Ustawienie czcionki na Impact */
+    background-image: url('background.jpg'); /* Wstaw link do zdjęcia tła */
+    background-size: cover; /* Pokrywa całe tło */
+    background-position: center; /* Wyśrodkowanie tła */
+    
+}
+
+.container {
+    display: flex;
+    flex-direction: column; /* Ustala kierunek na kolumny */
+    align-items: center; /* Wyśrodkowuje zawartość */
+    width: 100%; /* Szerokość na 100% */
+    max-width: 1200px; /* Maksymalna szerokość */
+    margin: 0 auto; /* Wyśrodkowanie kontenera */
+    min-height: calc(100vh - 100px); /* Ustawienie minimalnej wysokości na 100vh minus wysokość nagłówka i stopki */
+}
+
+.header {
+    background: linear-gradient(to right, #007bff, #00aaff); /* Gradient od niebieskiego do jasnoniebieskiego */
+    width: 100%; /* Ustawienie szerokości na 100% */
+    max-width: 1200px; /* Maksymalna szerokość */
+    padding: 20px 0; /* Wypełnienie góra/dół */
+    text-align: center; /* Wyśrodkowanie tekstu */
+    color: white; /* Kolor tekstu */
+    font-size: 24px; /* Większa czcionka */
+}
+
+.sidebar {
+    width: 100%; /* Ustawienie szerokości na 100% */
+    max-width: 1200px; /* Maksymalna szerokość */
+    display: flex; /* Użycie flexboxa */
+    justify-content: space-around; /* Rozkłada elementy równomiernie */
+    flex-wrap: wrap; /* Zawijanie elementów */
+    background-color: rgba(255, 255, 255, 0.8); /* Lekko przezroczysty kolor tła */
+    border-radius: 5px; /* Zaokrąglenie rogów */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Cień dla menu */
+    margin: 5px 0; /* Zmniejszenie odstępu od nagłówka */
+    font-size: 18px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    max-width: 1200px; /* Maksymalna szerokość */
+    padding: 0;
+    display: flex; /* Użycie flexboxa */
+    width: 100%; /* Szerokość na 100% */
+    justify-content: space-around; /* Wyśrodkowanie listy */
+}
+
+.sidebar ul li {
+    max-width: 1200px; /* Maksymalna szerokość */
+    margin: 5px; /* Odstęp między kafelkami */
+    flex: 1; /* Równomierne rozłożenie kafelków */
+}
+
+.sidebar ul li a {
+    max-width: 1200px; /* Maksymalna szerokość */
+    display: block; /* Ustawia link jako blok */
+    color: black; /* Ustaw kolor tekstu na czarny */
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.1); /* Lekko przezroczysty kolor tła kafelka */
+    padding: 15px; /* Wypełnienie wewnętrzne kafelka */
+    border-radius: 5px; /* Zaokrąglenie rogów */
+    transition: background-color 0.3s; /* Płynna zmiana koloru tła */
+    text-align: center; /* Wyśrodkowanie tekstu w kafelku */
+}
+
+.sidebar ul li a:hover {
+    max-width: 1200px; /* Maksymalna szerokość */
+    background-color: rgba(0, 0, 0, 0.3); /* Kolor tła przy najechaniu */
+    color: white; /* Zmiana koloru tekstu przy najechaniu */
+}
+
+.main-content {
+    display: flex; /* Włączenie flexboxa */
+    flex-direction: column; /* Ustawienie kierunku na kolumny */
+    align-items: center; /* Wyśrodkowanie elementów w poziomie */
+    justify-content: flex-start; /* Ustawienie elementów od góry */
+    background-color: rgba(255, 255, 255, 0.9); /* Przezroczyste tło dla głównej treści */
+    border-radius: 5px; /* Zaokrąglenie rogów */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Cień dla głównej treści */
+    padding: 0px; /* Większe wypełnienie dla kontenera */
+    width: 100%; /* Zmiana na 100% */
+    max-width: 1200px; /* Maksymalna szerokość */
+    margin: 5px 0; /* Wyśrodkowanie głównej treści */
+    min-height: 550px; /* Minimalna wysokość kontenera */
+}
+
+.section {
+    display: none; /* Ukrywa sekcje domyślnie */
+    width: 100%; /* Ustawienie szerokości sekcji na 100% */
+    padding: 0 20px; /* Wypełnienie z boków, aby zapewnić odstęp */
+    box-sizing: border-box; /* Umożliwia dodanie paddingu do szerokości */
+}
+.section h1, .section h2, .section p {
+    margin: 10px 0; /* Dodanie marginesu do nagłówków i paragrafów */
+    text-align: left; /* Wyrównanie tekstu do lewej */
+}
+
+
+.section.active {
+    display: block; /* Pokazuje aktywną sekcję */
+}
+.footer {
+    background: linear-gradient(to right, #007bff, #00aaff);
+    color: white; /* Biały tekst */
+    text-align: center; /* Wyśrodkowanie tekstu */
+    padding: 10px 0; /* Wypełnienie góra/dół */
+    width: 100%; /* Szerokość na 100% */
+    position: relative; /* Umożliwia pozycjonowanie */
+    margin-top: auto; /* Automatyczne dopasowanie do dołu */
+    font-size: 14px;
+}
+.form-group {
+    display: flex; /* Użycie flexboxa */
+    align-items: center; /* Wyrównanie elementów w pionie */
+    margin-bottom: 15px; /* Odstęp między zestawami */
+}
+
+label {
+    margin-right: 10px; /* Odstęp między etykietą a polem wejściowym */
+    width: 200px; /* Ustalona szerokość dla etykiety */
+}
+
+input, select {
+    flex-grow: 1; /* Rozciąga pole wejściowe lub selecta, aby wypełnić dostępną przestrzeń */
+    padding: 10px; /* Wypełnienie wewnętrzne */
+    border: 1px solid #ccc; /* Obramowanie */
+    border-radius: 5px; /* Zaokrąglenie rogów */
+}
+
+.submit-button {
+    background-color: #4CAF50; /* Zielony kolor przycisku */
+    color: white; /* Kolor tekstu */
+    padding: 10px 20px; /* Wypełnienie */
+    border: none; /* Bez obramowania */
+    border-radius: 5px; /* Zaokrąglenie rogów */
+    cursor: pointer; /* Kursor wskaźnika */
+}
+
+.submit-button:hover {
+    background-color: #45a049; /* Ciemniejszy zielony kolor przy najechaniu */
+}
+
+ul {
+    list-style-type: none; /* Usunięcie domyślnego stylu listy */
+    padding: 0;
+}
+
+li {
+    background-color: rgba(255, 255, 255, 0.8); /* Jasne tło dla każdej pozycji */
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Cień dla każdej pozycji */
+}
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px; /* Odstęp między elementami galerii */
+    justify-content: center; /* Wyśrodkowanie galerii */
+    padding: 20px;
+    max-width: 1200px; /* Ograniczenie maksymalnej szerokości */
+    margin: 0 auto; /* Wyśrodkowanie kontenera */
+}
+
+.gallery-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow: hidden; /* Ukrycie nadmiarowych części obrazów */
+}
+
+.gallery-image {
+    width: 100%;
+    height: 200px; /* Stała wysokość zdjęcia */
+    background-size: cover; /* Skalowanie tła, aby wypełniło cały element */
+    background-position: center; /* Centrowanie tła */
+    border-radius: 5px;
+}
+
+
+
+
+
